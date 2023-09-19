@@ -23,7 +23,7 @@ const Meals = () => {
 					<Meal key={meal.idMeal} meal={meal} />
 				))}
 			</div>
-			<div className="text-center mt-10">
+			<div className="text-center my-10">
 				{!isShowAll && (
 					<button
 						className="text-black py-1 px-4 bg-amber-400 hover:bg-amber-500  rounded-md"

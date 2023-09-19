@@ -6,13 +6,12 @@ const Meal = ({ meal }) => {
 	const { idMeal, strMealThumb, strMeal } = meal;
 	return (
 		<div className="flex justify-center items-center flex-col">
-			<Link to={`/meal/${idMeal}`}>
+			<Link to={`/meal/${idMeal}`} className="hover:text-amber-600">
 				<div className="w-64 h-64">
 					<img src={strMealThumb} alt="" className="w-full" />
 				</div>
-			</Link>
-			<Link to={`/meal/${idMeal}`} className="hover:text-amber-700">
-				{strMeal}
+
+				<p className="text-center">{strMeal}</p>
 			</Link>
 		</div>
 	);

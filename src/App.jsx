@@ -4,6 +4,7 @@ import Header from './Component/Header/Header';
 import Hero from './Component/Hero/Hero';
 import Meals from './Component/Meals/Meals';
 import Search from './Component/Search/Search';
+import Footer from './Component/Footer/Footer';
 // import { useState } from 'react';
 // import { useEffect, useState } from 'react';
 
@@ -35,6 +36,7 @@ function App() {
 			) : (
 				<Outlet />
 			)}
+			<Footer />
 		</>
 	);
 }
