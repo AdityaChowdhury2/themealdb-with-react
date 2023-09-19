@@ -6,14 +6,14 @@ const Search = ({ handleSearch }) => {
 			<div className="divider after:h-1 before:h-1"></div>
 			<div className="join flex justify-center">
 				<input
-					className="input input-bordered join-item w-4/12 focus:outline-none"
+					className="input input-bordered join-item md:w-4/12 focus:outline-none"
 					placeholder="Search for a Meal..."
 				/>
 				<button className="btn join-item" onClick={handleSearch}>
 					<Icon icon="material-symbols:search" width="28" />
 				</button>
 			</div>
-			<div className="flex gap-2 items-center justify-center mt-3">
+			<div className="flex gap-2 items-center justify-center mt-3 flex-col md:flex-row">
 				<div className="flex items-center gap-1">
 					<Icon icon="game-icons:meal" />
 					<p>Total Meals: {'294'}</p>

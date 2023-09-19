@@ -19,7 +19,7 @@ const Footer = () => {
 						<Icon icon="skill-icons:twitter" />
 						<Icon icon="skill-icons:discord" />
 					</div>
-					<div className="flex justify-center gap-3">
+					<div className="flex flex-col lg:flex-row justify-center gap-3">
 						<img src="https://www.themealdb.com/images/logo-tcdb.png" alt="" />
 						<img src="https://www.themealdb.com/images/logo-tadb.png" alt="" />
 						<img src="https://www.themealdb.com/images/logo-tsdb.png" alt="" />

@@ -3,10 +3,10 @@ import MealIcon from '/meal-icon.png';
 const Hero = () => {
 	return (
 		<div className="container flex items-center mt-8">
-			<div className="">
+			<div className="hidden md:block">
 				<img src={MealIcon} alt="" />
 			</div>
-			<div className="flex-1 px-2 md:px-20 text-center">
+			<div className="flex-1 px-2 lg:px-20 text-center">
 				<h1 className="mt-5 mb-2 text-4xl font-semibold">
 					Welcome to TheMealDB
 				</h1>
@@ -23,7 +23,7 @@ const Hero = () => {
 					Currently 76 supporter
 				</p>
 			</div>
-			<div className="">
+			<div className="hidden md:block">
 				<img src={MealIcon} alt="" />
 			</div>
 		</div>
