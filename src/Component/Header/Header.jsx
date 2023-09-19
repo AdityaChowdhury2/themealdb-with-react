@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import logo from '/logo-small.png';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ handleSearch }) => {
 	const [theme, setTheme] = useState(
 		localStorage.getItem('theme') ? localStorage.getItem('theme') : 'luxury'
 	);
@@ -21,12 +22,16 @@ const Header = () => {
 		<>
 			<nav className="container navbar bg-base-100 flex-col md:flex-row gap-y-4">
 				<div className="flex-1">
-					<img src={logo} alt="" />
+					<Link to="/">
+						<img src={logo} alt="" />
+					</Link>
 				</div>
 				<div className="flex-none gap-3">
 					<div className="form-control">
 						<input
+							onChange={handleSearch}
 							type="text"
+							// value={searchText}
 							placeholder="Search"
 							className="input input-bordered  md:w-auto"
 						/>
@@ -86,4 +91,7 @@ const Header = () => {
 	);
 };
 
+Header.propTypes = {
+	handleSearch: PropTypes.func.isRequired,
+};
 export default Header;

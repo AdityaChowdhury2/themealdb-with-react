@@ -20,7 +20,7 @@ const router = createBrowserRouter([
 			{
 				path: '/meal/:idMeal',
 				loader: ({ params }) => {
-					console.log(params.idMeal);
+					// console.log(params.idMeal);
 					return fetch(
 						`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idMeal}`
 					);
@@ -30,9 +30,19 @@ const router = createBrowserRouter([
 			{
 				path: '/meals/search/:searchText',
 				loader: ({ params }) => {
-					console.log(params.searchText);
+					// console.log(params.searchText);
 					return fetch(
-						`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.searchText}`
+						`https://www.themealdb.com/api/json/v1/1/search.php?s=${params?.searchText}`
+					);
+				},
+				element: <Meals />,
+			},
+			{
+				path: '/search/first/:firstChar',
+				loader: ({ params }) => {
+					// console.log(params.firstChar);
+					return fetch(
+						`https://www.themealdb.com/api/json/v1/1/search.php?f=${params.firstChar}`
 					);
 				},
 				element: <Meals />,

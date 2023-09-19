@@ -31,7 +31,7 @@ const MealDetails = () => {
 			measurement: measurements[idx],
 		});
 	});
-	console.log(ingredientsMeasurement);
+	// console.log(ingredientsMeasurement);
 	return (
 		<>
 			<div className="container p-3">

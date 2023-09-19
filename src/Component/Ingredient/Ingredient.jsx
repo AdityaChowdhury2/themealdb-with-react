@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Ingredient = ({ ingredient }) => {
-	console.log(ingredient);
+	// console.log(ingredient);
 	return (
 		<div className="flex justify-center items-center flex-col">
 			{/* <Link to={`/meal/${idMeal}`}> */}

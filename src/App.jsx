@@ -5,27 +5,27 @@ import Hero from './Component/Hero/Hero';
 import Meals from './Component/Meals/Meals';
 import Search from './Component/Search/Search';
 import Footer from './Component/Footer/Footer';
-// import { useState } from 'react';
-// import { useEffect, useState } from 'react';
+import BrowseByName from './Component/BrowseByName/BrowseByName';
+import { useState } from 'react';
 
 function App() {
-	// const [searchText, setSearchText] = useState('');
+	const [searchText, setSearchText] = useState('');
+
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleSearch = e => {
-		// console.log(e.target.closest('.join').querySelector('input').value);
-		// setSearchText(e.target.closest('.join').querySelector('input').value);
-		navigate(
-			`/meals/search/${e.target.closest('.join').querySelector('input').value}`
-		);
+		const route =
+			e.target.closest('.join')?.querySelector('input').value ||
+			e.target?.value;
+		setSearchText(e.target?.value);
+		// console.log(`/meals/search/${route}`);
+		route && navigate(`/meals/search/${route}`);
 	};
-	const location = useLocation();
-	// const navigation = useNavigation();
-	// console.log(navigation.state);
 
 	return (
 		<>
-			<Header />
+			<Header handleSearch={handleSearch} searchText={searchText} />
 
 			{location.pathname === '/' ? (
 				<>
@@ -36,6 +36,7 @@ function App() {
 			) : (
 				<Outlet />
 			)}
+			<BrowseByName />
 			<Footer />
 		</>
 	);
