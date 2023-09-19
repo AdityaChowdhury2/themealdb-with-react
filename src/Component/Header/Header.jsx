@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 	const [theme, setTheme] = useState(
-		localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
+		localStorage.getItem('theme') ? localStorage.getItem('theme') : 'luxury'
 	);
 
 	useEffect(() => {
@@ -14,7 +14,7 @@ const Header = () => {
 			.setAttribute('data-theme', localStorage.getItem('theme'));
 	}, [theme]);
 	const handleThemeChange = e => {
-		e.target.checked ? setTheme('dark') : setTheme('light');
+		e.target.checked ? setTheme('dracula') : setTheme('luxury');
 	};
 
 	return (
